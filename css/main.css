@@ -978,7 +978,8 @@ pre .javascript .function {
   bottom: 19px;
 }
 .header {
-  background: #fff;
+  background: url("/YggdrasilBlog/photos/my-head-bg.jpg") no-repeat bottom;
+  background-size: cover;
 }
 .header-inner {
   position: relative;
@@ -1685,7 +1686,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff3c90;
+  background: #ff42e7;
 }
 .links-of-blogroll {
   font-size: 13px;
