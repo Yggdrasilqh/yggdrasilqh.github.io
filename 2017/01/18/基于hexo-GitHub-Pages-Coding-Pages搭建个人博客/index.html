@@ -111,7 +111,8 @@ MarkDown (标记语言)">
 <meta property="og:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/github2.png">
 <meta property="og:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/github3.png">
 <meta property="og:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/github4.png">
-<meta property="og:updated_time" content="2017-01-18T10:07:41.000Z">
+<meta property="og:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/domain.png">
+<meta property="og:updated_time" content="2017-01-18T10:57:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于hexo+GitHub Pages|Coding Pages搭建个人博客">
 <meta name="twitter:description" content="知识清单
@@ -166,6 +167,12 @@ MarkDown (标记语言)">
 
 
 
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1261158371&web_id=1261158371" language="JavaScript"></script>
+  </div>
 
 
 
@@ -398,10 +405,10 @@ MarkDown (标记语言)">
 <ol>
 <li><a href="#1-安装Node-js">安装Node.js</a></li>
 <li><a href="#2-安装Hexo">安装Hexo</a></li>
-<li>开始使用</li>
-<li>更换主题</li>
-<li>网站部署</li>
-<li>购买域名</li>
+<li><a href="#3-开始使用">开始使用</a></li>
+<li><a href="#5-更换主题">更换主题</a></li>
+<li><a href="#5-网站部署">网站部署</a></li>
+<li><a href="#6-购买域名">购买域名</a></li>
 </ol>
 <p>很简单，那么我们开始</p>
 <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><hr>
@@ -475,10 +482,10 @@ MarkDown (标记语言)">
 <img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/initBlog.png" alt="FirstBlog" title="FirstBlog">
 <p>这就是你的博客啦。</p>
 <p>你可以发现它已经默认生成了第一篇Hello，World文章。那么我们该怎么开始写东西呢。</p>
-<h3 id="3-开始使用"><a href="#3-开始使用" class="headerlink" title="3. 开始使用"></a>3. 开始使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$hexo</span> new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
+<h3 id="3-开始使用"><a href="#3-开始使用" class="headerlink" title="3. 开始使用"></a>3. 开始使用</h3><h4 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$hexo</span> new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
 <p>这个命令是新建一篇文章，layout是版面，title是你要创建的文章名。如果没有设置 <code>layout</code> 的话，默认使用 <a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">_config.yml</a> 中的 <code>default_layout</code> 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
 <p>然后用markdown编辑器打开_posts目录下自动生成的title.md，这时你就可以愉快的写文章了。</p>
-<p>这里推荐一款mac版的md编辑器：<a href="https://typora.io/" target="_blank" rel="external">Typora</a>。</p>
+<h4 id="编辑文章"><a href="#编辑文章" class="headerlink" title="编辑文章"></a>编辑文章</h4><p>这里推荐一款mac版的md编辑器：<a href="https://typora.io/" target="_blank" rel="external">Typora</a>。</p>
 <img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/typora.jpeg" alt="Typora" title="Typora">
 <p>至于它有多好用？用了你就知道。</p>
 <img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/typora2.png" alt="Typora2" title="Typora2">
@@ -488,14 +495,14 @@ MarkDown (标记语言)">
 <p>写完之后我们保存，然后刷新刚才的localhost:4000。</p>
 <img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/post.png" alt="post" title="post">
 <p>就可以看到我们刚才写的东西。</p>
-<p>细心的同学可能已经发现我们在打开新建的文章时，头上已经有一些东西。</p>
+<h4 id="文章属性"><a href="#文章属性" class="headerlink" title="文章属性"></a>文章属性</h4><p>细心的同学可能已经发现我们在打开新建的文章时，头上已经有一些东西。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">title:</span> My-Test-Post</div><div class="line"><span class="attr">date:</span> <span class="number">2017</span><span class="bullet">-01</span><span class="bullet">-18</span> <span class="number">17</span>:<span class="number">03</span>:<span class="number">40</span></div><div class="line"><span class="attr">tags:</span></div></pre></td></tr></table></figure>
 <p>这里是Front-matter，即文件上方以<code>---</code>分割的区域，它使用的似乎是<a href="http://baike.baidu.com/link?url=u9koZpImnSsz_SvrZivzjKo0LhsKwWDIomL27EPwN6-Kd9A5QpoTVLOZMCXLmNp0VCMegBXRWWxSCoaw0_URWa" target="_blank" rel="external">yaml</a>语言，我觉得有点类似于json和xml之类，键值对类型的数据。总之，无论他是什么，你可以方便的在这里设置一些东西，比如我们看到的文章标题，发布时间，标签，以及类别(categories)。如果要设置多个标签的话，要这样写<code>[tag1,tag2]</code>。</p>
 <p>还有如果你使用的主题带了评论功能的话，使用<code>comments: false</code>可以在特定的页面，如（关于我）关闭它。</p>
 <p>具体参见Hexo官方文档<a href="https://hexo.io/zh-cn/docs/front-matter.html" target="_blank" rel="external">Front-matter</a></p>
 <p>当然，博客的一些固定内容我们也可以通过修改_config.yml文件来做出相应改变。</p>
 <p>您可以在该文件中修改大部份的配置。</p>
-<h4 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h4><table>
+<h4 id="具体配置"><a href="#具体配置" class="headerlink" title="具体配置"></a>具体配置</h4><h5 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h5><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -529,7 +536,7 @@ MarkDown (标记语言)">
 </tr>
 </tbody>
 </table>
-<h4 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h4><table>
+<h5 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h5><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -562,7 +569,7 @@ MarkDown (标记语言)">
 <blockquote>
 <p><strong>网站存放在子目录</strong>如果您的网站存放在子目录中，例如 <code>http://yoursite.com/blog</code>，则请将您的 <code>url</code> 设为 <code>http://yoursite.com/blog</code> 并把 <code>root</code> 设为 <code>/blog/</code>。</p>
 </blockquote>
-<h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><table>
+<h5 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h5><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -612,7 +619,7 @@ MarkDown (标记语言)">
 </tr>
 </tbody>
 </table>
-<h4 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h4><table>
+<h5 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h5><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -677,7 +684,7 @@ MarkDown (标记语言)">
 </tr>
 </tbody>
 </table>
-<h4 id="分类-amp-标签"><a href="#分类-amp-标签" class="headerlink" title="分类 &amp; 标签"></a>分类 &amp; 标签</h4><table>
+<h5 id="分类-amp-标签"><a href="#分类-amp-标签" class="headerlink" title="分类 &amp; 标签"></a>分类 &amp; 标签</h5><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -702,7 +709,7 @@ MarkDown (标记语言)">
 </tr>
 </tbody>
 </table>
-<h4 id="日期-时间格式"><a href="#日期-时间格式" class="headerlink" title="日期 / 时间格式"></a>日期 / 时间格式</h4><p>Hexo 使用 <a href="http://momentjs.com/" target="_blank" rel="external">Moment.js</a> 来解析和显示时间。</p>
+<h5 id="日期-时间格式"><a href="#日期-时间格式" class="headerlink" title="日期 / 时间格式"></a>日期 / 时间格式</h5><p>Hexo 使用 <a href="http://momentjs.com/" target="_blank" rel="external">Moment.js</a> 来解析和显示时间。</p>
 <table>
 <thead>
 <tr>
@@ -724,7 +731,7 @@ MarkDown (标记语言)">
 </tr>
 </tbody>
 </table>
-<h4 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h4><table>
+<h5 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h5><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -745,7 +752,7 @@ MarkDown (标记语言)">
 </tr>
 </tbody>
 </table>
-<h4 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h4><table>
+<h5 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h5><table>
 <thead>
 <tr>
 <th>参数</th>
@@ -842,6 +849,27 @@ MarkDown (标记语言)">
 </ul>
 <p>它就会自动帮我们部署到对应的GitHub和Coding的仓库里去。</p>
 <p>打开你的网址yourname.github.io看看吧~</p>
+<h3 id="6-购买域名"><a href="#6-购买域名" class="headerlink" title="6.购买域名"></a>6.购买域名</h3><p>我们在之前的部署完成后网址可能不是很美观，中间总是带有GitHub或是coding。为了逼格更高一点，看起来就像是跑在自己服务器上的网站，我们就需要花一点代价来绑定一个自己的域名。</p>
+<ul>
+<li>许多人推荐GoDaddy，我看了看后发现成本太高。回头投进了阿里爸爸的怀抱，好像是阿里和万网的合作，网页居然还不支持<em>Retina</em>屏，引用的万网那一块搜索框不忍直视。</li>
+</ul>
+<blockquote>
+<p> 那么这里就说说万网的域名怎么注册</p>
+</blockquote>
+<ul>
+<li>登陆账号（支付宝的就行），百度搜索阿里域名，在搜索框搜索到自己想要的域名后，加入清单！买买买。</li>
+<li>中间可能会进行实名认证等操作，我记性不好，弄完也差不多忘了。这里就不贴截图，您按步骤一步一步来就行。</li>
+<li>然后进入控制台 — &gt; 域名与网站（sideBar） —&gt; 域名</li>
+<li>发现你买的域名了吧，点屁股后面的解析</li>
+</ul>
+<img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/domain.png" alt="domian" title="domian">
+<ul>
+<li>添加一个CNAME(如果将域名指向一个域名，实现与被指向域名相同的访问效果，需要增加CNAME记录)的解析，然后主机记录想怎么填怎么填，最好还是填个blog之类的，以后其他记录还能用来做其他更有意思的页面。@记录做个主页之类的。记录值的话我这里以Coding举例，填写(pages.coding.me)就OK。其他的不用管，然后在coding pages设定里填上你绑定的域名。</li>
+<li>浏览器访问<a href="http://your.domain.com" target="_blank" rel="external">http://your.domain.com</a> </li>
+<li>well done !</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>其实说简单也不容易，它还是花了我接近三天的时间。选主题就纠结了我很久，最后发现有些主题还不支持tags和categories，我也懒得自己去添加。最后决定用NexT主题，文档挺丰富（比Hexo的渣文档好哪去了），很多问题别人在GitHub issue里也提出了。所以省了很多心。在修改主题源码的过程中发现他们居然保留有一些custom.styl之类的文件，打开变量文件找到变量名后在custom文件里直接修改就覆盖了原来的配置，简直贴心到不行。这里给NexT的contributor们一颗小心心。</p>
+<p>如果您在这篇文章中有遇到疑问或发现了问题，欢迎给我发邮件 <a href="mailto:yggdrasilqh@gmail.com" target="_blank" rel="external">yggdrasilqh@gmail.com</a>。我都会认真对待。</p>
 
       
     </div>
@@ -884,8 +912,8 @@ MarkDown (标记语言)">
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2048/01/01/hello-world/" rel="prev" title="由来。">
-                由来。 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/18/test/" rel="prev" title="test">
+                test <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -956,7 +984,7 @@ MarkDown (标记语言)">
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1009,7 +1037,7 @@ MarkDown (标记语言)">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识清单"><span class="nav-number">1.</span> <span class="nav-text">知识清单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要步骤"><span class="nav-number">2.</span> <span class="nav-text">主要步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">3.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装Node-js"><span class="nav-number">3.1.</span> <span class="nav-text">1.安装Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装Hexo"><span class="nav-number">3.2.</span> <span class="nav-text">2.安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-开始使用"><span class="nav-number">3.3.</span> <span class="nav-text">3. 开始使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#网站"><span class="nav-number">3.3.1.</span> <span class="nav-text">网站</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网址"><span class="nav-number">3.3.2.</span> <span class="nav-text">网址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目录"><span class="nav-number">3.3.3.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章"><span class="nav-number">3.3.4.</span> <span class="nav-text">文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类-amp-标签"><span class="nav-number">3.3.5.</span> <span class="nav-text">分类 & 标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#日期-时间格式"><span class="nav-number">3.3.6.</span> <span class="nav-text">日期 / 时间格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分页"><span class="nav-number">3.3.7.</span> <span class="nav-text">分页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展"><span class="nav-number">3.3.8.</span> <span class="nav-text">扩展</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-更换主题"><span class="nav-number">3.4.</span> <span class="nav-text">4.更换主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-网站部署"><span class="nav-number">3.5.</span> <span class="nav-text">5.网站部署</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识清单"><span class="nav-number">1.</span> <span class="nav-text">知识清单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要步骤"><span class="nav-number">2.</span> <span class="nav-text">主要步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">3.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装Node-js"><span class="nav-number">3.1.</span> <span class="nav-text">1.安装Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装Hexo"><span class="nav-number">3.2.</span> <span class="nav-text">2.安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-开始使用"><span class="nav-number">3.3.</span> <span class="nav-text">3. 开始使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#新建文章"><span class="nav-number">3.3.1.</span> <span class="nav-text">新建文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编辑文章"><span class="nav-number">3.3.2.</span> <span class="nav-text">编辑文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章属性"><span class="nav-number">3.3.3.</span> <span class="nav-text">文章属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#具体配置"><span class="nav-number">3.3.4.</span> <span class="nav-text">具体配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#网站"><span class="nav-number">3.3.4.1.</span> <span class="nav-text">网站</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#网址"><span class="nav-number">3.3.4.2.</span> <span class="nav-text">网址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#目录"><span class="nav-number">3.3.4.3.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#文章"><span class="nav-number">3.3.4.4.</span> <span class="nav-text">文章</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分类-amp-标签"><span class="nav-number">3.3.4.5.</span> <span class="nav-text">分类 & 标签</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#日期-时间格式"><span class="nav-number">3.3.4.6.</span> <span class="nav-text">日期 / 时间格式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分页"><span class="nav-number">3.3.4.7.</span> <span class="nav-text">分页</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#扩展"><span class="nav-number">3.3.4.8.</span> <span class="nav-text">扩展</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-更换主题"><span class="nav-number">3.4.</span> <span class="nav-text">4.更换主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-网站部署"><span class="nav-number">3.5.</span> <span class="nav-text">5.网站部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-购买域名"><span class="nav-number">3.6.</span> <span class="nav-text">6.购买域名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">3.7.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1166,6 +1194,21 @@ MarkDown (标记语言)">
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
