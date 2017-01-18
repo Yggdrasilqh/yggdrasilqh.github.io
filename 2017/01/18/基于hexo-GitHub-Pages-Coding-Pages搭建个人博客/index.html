@@ -1,0 +1,1174 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Node.js,Hexo,GitHub," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="知识清单
+在开始之前，你可能需要大概了解以下技术：
+
+GitHub (面向开源及私有软件项目的托管平台)
+Node.js (JavaScript Runtime)
+DNS (域名IP映射)
+MarkDown (标记语言)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于hexo+GitHub Pages|Coding Pages搭建个人博客">
+<meta property="og:url" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/index.html">
+<meta property="og:site_name" content="Yggdrasil">
+<meta property="og:description" content="知识清单
+在开始之前，你可能需要大概了解以下技术：
+
+GitHub (面向开源及私有软件项目的托管平台)
+Node.js (JavaScript Runtime)
+DNS (域名IP映射)
+MarkDown (标记语言)">
+<meta property="og:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/initBlog.png">
+<meta property="og:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/typora.jpeg">
+<meta property="og:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/typora2.png">
+<meta property="og:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/typora3.png">
+<meta property="og:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/post.png">
+<meta property="og:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/github1.png">
+<meta property="og:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/github2.png">
+<meta property="og:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/github3.png">
+<meta property="og:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/github4.png">
+<meta property="og:updated_time" content="2017-01-18T10:07:41.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基于hexo+GitHub Pages|Coding Pages搭建个人博客">
+<meta name="twitter:description" content="知识清单
+在开始之前，你可能需要大概了解以下技术：
+
+GitHub (面向开源及私有软件项目的托管平台)
+Node.js (JavaScript Runtime)
+DNS (域名IP映射)
+MarkDown (标记语言)">
+<meta name="twitter:image" content="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/initBlog.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/"/>
+
+
+
+
+
+  <title> 基于hexo+GitHub Pages|Coding Pages搭建个人博客 | Yggdrasil </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Yggdrasil</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">still alive</p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://blog.yggdrasil-web.cn/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Yggdrasil">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/ygg-icon.JPG">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Yggdrasil">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Yggdrasil" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                基于hexo+GitHub Pages|Coding Pages搭建个人博客
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-18T14:48:36+08:00">
+                2017-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Technology/" itemprop="url" rel="index">
+                    <span itemprop="name">Computer Technology</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="知识清单"><a href="#知识清单" class="headerlink" title="知识清单"></a>知识清单</h2><hr>
+<p>在开始之前，你可能需要大概了解以下技术：</p>
+<ul>
+<li><a href="http://baike.baidu.com/link?url=mvEyxsOIQKlbLpTIc19fTKC50ZKygPp4HbycJI_vtwihgVNp5qO-9ENQVgsj4jLa8f3jpxk-RVOsQKnflyvC7q" target="_blank" rel="external">GitHub</a> (面向开源及私有软件项目的托管平台)</li>
+<li><a href="http://baike.baidu.com/link?url=_IyROnlqrgQDTHyWe2BlMSElBml3xiMEsNGKjeeJDm4dlAaJ7LkHWqnuxhuX_-YVoAFxIiMj104Aba34eCZ4f_" target="_blank" rel="external">Node.js</a> (JavaScript Runtime)</li>
+<li><a href="http://baike.baidu.com/link?url=zSppKSH1vkS3Y8_cavY0iHU5ZPz5SNPzmj-EtuTLyZXOvJxUx-0w__qAgcv1WSpIpdDK1IdEPbWT2NfTdd7vyt3hjJxva0QcTrQjRuIel5y" target="_blank" rel="external">DNS</a> (域名IP映射)</li>
+<li><a href="http://baike.baidu.com/link?url=L5baqkqYvFiREKjP3Woj0QfjkTwnLljahZbFLaQgTa1vxHPtrvr0VJpv65czg-iDBRAoMW-0T8YVjUfXVprt7fsDO27lxRRz3Rxwo2Ak2oi" target="_blank" rel="external">MarkDown</a> (标记语言)</li>
+</ul>
+<a id="more"></a>
+<h2 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h2><hr>
+<ol>
+<li><a href="#1-安装Node-js">安装Node.js</a></li>
+<li><a href="#2-安装Hexo">安装Hexo</a></li>
+<li>开始使用</li>
+<li>更换主题</li>
+<li>网站部署</li>
+<li>购买域名</li>
+</ol>
+<p>很简单，那么我们开始</p>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><hr>
+<h3 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1.安装Node.js"></a>1.安装Node.js</h3><p>因为Hexo是基于Node.js环境运行的，所以我们需要先装上它。</p>
+<ul>
+<li><p>Mac：<a href="https://nodejs.org/dist/v6.9.4/node-v6.9.4.pkg" target="_blank" rel="external">Node.js</a>下载 或：</p>
+<p>如果你安装了HomeBrew</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$brew</span> install node</div></pre></td></tr></table></figure>
+</li>
+<li><p>Windows: <a href="https://nodejs.org/dist/v6.9.4/node-v6.9.4-x86.msi" target="_blank" rel="external">Node.js</a>下载</p>
+</li>
+<li><p>Linux: <a href="https://nodejs.org/dist/v6.9.4/node-v6.9.4-linux-x64.tar.xz" target="_blank" rel="external">Node.js</a>下载 或：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$sudo</span> apt-get install nodejs</div><div class="line"><span class="variable">$sudo</span> apt-get install npm</div></pre></td></tr></table></figure>
+<p>(听说这种方法装的版本较老，慎用。)</p>
+<p>1.下载好了之后就安心的戳下一步，妥妥的，毕竟这不是Oracle。</p>
+<p>2.在终端输入以下命令验证</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$node</span> -v</div><div class="line">v6.9.4</div><div class="line"><span class="variable">$npm</span> -v</div><div class="line">4.1.1</div></pre></td></tr></table></figure>
+<p>如果出现了版本号的话那就证明安装成功。如果没有，可能需要手动添加环境变量到<code>~/.bash_profile</code>中。具体方法以后会写。</p>
+</li>
+</ul>
+<h3 id="2-安装Hexo"><a href="#2-安装Hexo" class="headerlink" title="2.安装Hexo"></a>2.安装Hexo</h3><p>可能很多人没有听说过Hexo是什么东西</p>
+<blockquote>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可生成漂亮的静态网页。</p>
+</blockquote>
+<p>因为我们已经装了Node.js，所以随同也安装了npm (包管理工具) ，如此安装hexo就非常简单了。</p>
+<ol>
+<li><p>打开终端输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$sudo</span> npm install hexo-cli -g</div></pre></td></tr></table></figure>
+<p>输入密码，等待完成。</p>
+<p>在安装中你可能会遇到各种问题，比如我遇到的：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123; [Error: Cannot find module <span class="string">'./build/Release/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</div><div class="line">&#123; [Error: Cannot find module <span class="string">'./build/default/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</div><div class="line">&#123; [Error: Cannot find module <span class="string">'./build/Debug/DTraceProviderBindings'</span>] code: <span class="string">'MODULE_NOT_FOUND'</span> &#125;</div></pre></td></tr></table></figure>
+<p>一言不合就重装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$npm</span> uninstall hexo-cli -g</div><div class="line"><span class="variable">$npm</span> install hexo -cli -g</div></pre></td></tr></table></figure>
+</li>
+<li><p>然后我们创建一个文件夹，在那里初始化hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$mkdir</span> your-blog-name</div><div class="line"><span class="variable">$cd</span> your-blog-name</div></pre></td></tr></table></figure>
+</li>
+<li><p>初始化hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$hexo</span> init</div></pre></td></tr></table></figure>
+<p>如果你看到以下信息，那么恭喜你，成功了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo-site@0.0.0 /Users/UserName/Documents/your-blog-name</div><div class="line">├─┬ hexo@3.2.2 </div><div class="line">..............</div><div class="line">INFO  Start blogging with Hexo!</div></pre></td></tr></table></figure>
+<p>这时你会在刚才创建的文件夹下看到如下的目录结构</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── _config.yml</div><div class="line">├── package.json</div><div class="line">├── scaffolds</div><div class="line">├── <span class="built_in">source</span></div><div class="line">|   ├── _drafts</div><div class="line">|   └── _posts</div><div class="line">└── themes</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><p>_config.yml</p>
+<p>网站的 <a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">配置</a> 信息，您可以在此配置大部分的参数。</p>
+</li>
+<li><p>package.json</p>
+<p>应用程序的信息。<a href="http://embeddedjs.com/" target="_blank" rel="external">EJS</a>, <a href="http://learnboost.github.io/stylus/" target="_blank" rel="external">Stylus</a> 和 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external">Markdown</a> renderer 已默认安装，您可以自由移除。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">package.json</div><div class="line">&#123;</div><div class="line">  &quot;name&quot;: &quot;hexo-site&quot;,</div><div class="line">  &quot;version&quot;: &quot;0.0.0&quot;,</div><div class="line">  &quot;private&quot;: true,</div><div class="line">  &quot;hexo&quot;: &#123;</div><div class="line">    &quot;version&quot;: &quot;&quot;</div><div class="line">  &#125;,</div><div class="line">  &quot;dependencies&quot;: &#123;</div><div class="line">    &quot;hexo&quot;: &quot;^3.0.0&quot;,</div><div class="line">    &quot;hexo-generator-archive&quot;: &quot;^0.1.0&quot;,</div><div class="line">    &quot;hexo-generator-category&quot;: &quot;^0.1.0&quot;,</div><div class="line">    &quot;hexo-generator-index&quot;: &quot;^0.1.0&quot;,</div><div class="line">    &quot;hexo-generator-tag&quot;: &quot;^0.1.0&quot;,</div><div class="line">    &quot;hexo-renderer-ejs&quot;: &quot;^0.1.0&quot;,</div><div class="line">    &quot;hexo-renderer-stylus&quot;: &quot;^0.2.0&quot;,</div><div class="line">    &quot;hexo-renderer-marked&quot;: &quot;^0.2.4&quot;,</div><div class="line">    &quot;hexo-server&quot;: &quot;^0.1.2&quot;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>scaffolds</p>
+<p><a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="external">模版</a> 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。</p>
+</li>
+<li><p>source</p>
+<p>资源文件夹是存放用户资源的地方。除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹，而其他文件会被拷贝过去。</p>
+</li>
+<li><p>themes</p>
+<p><a href="https://hexo.io/zh-cn/docs/themes.html" target="_blank" rel="external">主题</a> 文件夹。Hexo 会根据主题来生成静态页面。</p>
+</li>
+</ul>
+<p>这些结构在待会儿我们再详细讲有什么用，现在我们看看我的博客现在成什么样了，在terminal输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$hexo</span> g			//g即generate缩写(生成静态文件)</div><div class="line"><span class="variable">$hexo</span> s			//s即server(启动服务器)</div></pre></td></tr></table></figure>
+<p>这时你会看到</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">INFO  Start processing</div><div class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</div></pre></td></tr></table></figure>
+<p>告诉你hexo已经启动在了localhost的4000端口上，于是在浏览器的地址栏输入<code>localhost:4000</code></p>
+<img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/initBlog.png" alt="FirstBlog" title="FirstBlog">
+<p>这就是你的博客啦。</p>
+<p>你可以发现它已经默认生成了第一篇Hello，World文章。那么我们该怎么开始写东西呢。</p>
+<h3 id="3-开始使用"><a href="#3-开始使用" class="headerlink" title="3. 开始使用"></a>3. 开始使用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$hexo</span> new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
+<p>这个命令是新建一篇文章，layout是版面，title是你要创建的文章名。如果没有设置 <code>layout</code> 的话，默认使用 <a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">_config.yml</a> 中的 <code>default_layout</code> 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<p>然后用markdown编辑器打开_posts目录下自动生成的title.md，这时你就可以愉快的写文章了。</p>
+<p>这里推荐一款mac版的md编辑器：<a href="https://typora.io/" target="_blank" rel="external">Typora</a>。</p>
+<img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/typora.jpeg" alt="Typora" title="Typora">
+<p>至于它有多好用？用了你就知道。</p>
+<img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/typora2.png" alt="Typora2" title="Typora2">
+<p>界面也是我很喜欢的，比Atom好看启动速度也非常快（虽然不该拿它们两比）。</p>
+<img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/typora3.png" alt="Typora3" title="Typora3">
+<p>嗯，用它来写文章一定会让你舒畅无比。</p>
+<p>写完之后我们保存，然后刷新刚才的localhost:4000。</p>
+<img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/post.png" alt="post" title="post">
+<p>就可以看到我们刚才写的东西。</p>
+<p>细心的同学可能已经发现我们在打开新建的文章时，头上已经有一些东西。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">title:</span> My-Test-Post</div><div class="line"><span class="attr">date:</span> <span class="number">2017</span><span class="bullet">-01</span><span class="bullet">-18</span> <span class="number">17</span>:<span class="number">03</span>:<span class="number">40</span></div><div class="line"><span class="attr">tags:</span></div></pre></td></tr></table></figure>
+<p>这里是Front-matter，即文件上方以<code>---</code>分割的区域，它使用的似乎是<a href="http://baike.baidu.com/link?url=u9koZpImnSsz_SvrZivzjKo0LhsKwWDIomL27EPwN6-Kd9A5QpoTVLOZMCXLmNp0VCMegBXRWWxSCoaw0_URWa" target="_blank" rel="external">yaml</a>语言，我觉得有点类似于json和xml之类，键值对类型的数据。总之，无论他是什么，你可以方便的在这里设置一些东西，比如我们看到的文章标题，发布时间，标签，以及类别(categories)。如果要设置多个标签的话，要这样写<code>[tag1,tag2]</code>。</p>
+<p>还有如果你使用的主题带了评论功能的话，使用<code>comments: false</code>可以在特定的页面，如（关于我）关闭它。</p>
+<p>具体参见Hexo官方文档<a href="https://hexo.io/zh-cn/docs/front-matter.html" target="_blank" rel="external">Front-matter</a></p>
+<p>当然，博客的一些固定内容我们也可以通过修改_config.yml文件来做出相应改变。</p>
+<p>您可以在该文件中修改大部份的配置。</p>
+<h4 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>网站标题</td>
+</tr>
+<tr>
+<td><code>subtitle</code></td>
+<td>网站副标题</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>网站描述</td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>您的名字</td>
+</tr>
+<tr>
+<td><code>language</code></td>
+<td>网站使用的语言</td>
+</tr>
+<tr>
+<td><code>timezone</code></td>
+<td>网站时区。Hexo 默认使用您电脑的时区。<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="external">时区列表</a>。比如说：<code>America/New_York</code>, <code>Japan</code>, 和 <code>UTC</code> 。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td>网址</td>
+<td></td>
+</tr>
+<tr>
+<td><code>root</code></td>
+<td>网站根目录</td>
+<td></td>
+</tr>
+<tr>
+<td><code>permalink</code></td>
+<td>文章的 <a href="https://hexo.io/zh-cn/docs/permalinks.html" target="_blank" rel="external">永久链接</a> 格式</td>
+<td><code>:year/:month/:day/:title/</code></td>
+</tr>
+<tr>
+<td><code>permalink_default</code></td>
+<td>永久链接中各部分的默认值</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>网站存放在子目录</strong>如果您的网站存放在子目录中，例如 <code>http://yoursite.com/blog</code>，则请将您的 <code>url</code> 设为 <code>http://yoursite.com/blog</code> 并把 <code>root</code> 设为 <code>/blog/</code>。</p>
+</blockquote>
+<h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source_dir</code></td>
+<td>资源文件夹，这个文件夹用来存放内容。</td>
+<td><code>source</code></td>
+</tr>
+<tr>
+<td><code>public_dir</code></td>
+<td>公共文件夹，这个文件夹用于存放生成的站点文件。</td>
+<td><code>public</code></td>
+</tr>
+<tr>
+<td><code>tag_dir</code></td>
+<td>标签文件夹</td>
+<td><code>tags</code></td>
+</tr>
+<tr>
+<td><code>archive_dir</code></td>
+<td>归档文件夹</td>
+<td><code>archives</code></td>
+</tr>
+<tr>
+<td><code>category_dir</code></td>
+<td>分类文件夹</td>
+<td><code>categories</code></td>
+</tr>
+<tr>
+<td><code>code_dir</code></td>
+<td>Include code 文件夹</td>
+<td><code>downloads/code</code></td>
+</tr>
+<tr>
+<td><code>i18n_dir</code></td>
+<td>国际化（i18n）文件夹</td>
+<td><code>:lang</code></td>
+</tr>
+<tr>
+<td><code>skip_render</code></td>
+<td>跳过指定文件的渲染，您可使用 <a href="https://github.com/isaacs/node-glob" target="_blank" rel="external">glob 表达式</a>来匹配路径。</td>
+</tr>
+</tbody>
+</table>
+<h4 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>new_post_name</code></td>
+<td>新文章的文件名称</td>
+<td>:title.md</td>
+</tr>
+<tr>
+<td><code>default_layout</code></td>
+<td>预设布局</td>
+<td>post</td>
+</tr>
+<tr>
+<td><code>auto_spacing</code></td>
+<td>在中文和英文之间加入空格</td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>titlecase</code></td>
+<td>把标题转换为 title case</td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>external_link</code></td>
+<td>在新标签中打开链接</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>filename_case</code></td>
+<td>把文件名称转换为 (1) 小写或 (2) 大写</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>render_drafts</code></td>
+<td>显示草稿</td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>post_asset_folder</code></td>
+<td>启动 <a href="https://hexo.io/zh-cn/docs/asset-folders.html" target="_blank" rel="external">Asset 文件夹</a></td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>relative_link</code></td>
+<td>把链接改为与根目录的相对位址</td>
+<td>false</td>
+</tr>
+<tr>
+<td><code>future</code></td>
+<td>显示未来的文章</td>
+<td>true</td>
+</tr>
+<tr>
+<td><code>highlight</code></td>
+<td>代码块的设置</td>
+</tr>
+</tbody>
+</table>
+<h4 id="分类-amp-标签"><a href="#分类-amp-标签" class="headerlink" title="分类 &amp; 标签"></a>分类 &amp; 标签</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>default_category</code></td>
+<td>默认分类</td>
+<td><code>uncategorized</code></td>
+</tr>
+<tr>
+<td><code>category_map</code></td>
+<td>分类别名</td>
+<td></td>
+</tr>
+<tr>
+<td><code>tag_map</code></td>
+<td>标签别名</td>
+</tr>
+</tbody>
+</table>
+<h4 id="日期-时间格式"><a href="#日期-时间格式" class="headerlink" title="日期 / 时间格式"></a>日期 / 时间格式</h4><p>Hexo 使用 <a href="http://momentjs.com/" target="_blank" rel="external">Moment.js</a> 来解析和显示时间。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date_format</code></td>
+<td>日期格式</td>
+<td><code>YYYY-MM-DD</code></td>
+</tr>
+<tr>
+<td><code>time_format</code></td>
+<td>时间格式</td>
+<td><code>H:mm:ss</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="分页"><a href="#分页" class="headerlink" title="分页"></a>分页</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>per_page</code></td>
+<td>每页显示的文章量 (0 = 关闭分页功能)</td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code>pagination_dir</code></td>
+<td>分页目录</td>
+<td><code>page</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h4><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>theme</code></td>
+<td>当前主题名称。值为<code>false</code>时禁用主题</td>
+</tr>
+<tr>
+<td><code>deploy</code></td>
+<td>部署部分的设置</td>
+</tr>
+</tbody>
+</table>
+<p>你可能觉得自带的主题太丑，我也觉得。所以下一步我们来更换主题。</p>
+<h3 id="4-更换主题"><a href="#4-更换主题" class="headerlink" title="4.更换主题"></a>4.更换主题</h3><p>在之前我们init的博客目录下，有一个名为theme的文件夹，在这里就存放的是主题文件。</p>
+<ul>
+<li>你可以在<a href="https://hexo.io/themes/" target="_blank" rel="external">这里</a>找到你喜欢的主题，并把它<code>git clone</code>下来，放在theme文件夹里。</li>
+<li>修改_config.yml文件，把原来的</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="attr">theme:</span> landscape		//修改为</div><div class="line"><span class="attr">theme:</span> new_theme_name	//新的主题名</div></pre></td></tr></table></figure>
+<ul>
+<li>然后刷新页面就能看到效果啦。如果没有生效的话</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$hexo</span> clean</div><div class="line"><span class="variable">$hexo</span> g</div><div class="line"><span class="variable">$hexo</span> s</div></pre></td></tr></table></figure>
+<ul>
+<li>Done!</li>
+</ul>
+<p>你可能想让你的主题和其他人不一样，这样就需要修改一些主题中文件来达到你喜爱的效果。在这里我就不过多赘述，有需要的同学可以邮件问我 <a href="mailto:yggdrasilqh@gmail.com" target="_blank" rel="external">yggdrasilqh@gmail.com</a>。</p>
+<blockquote>
+<p>这时我们的本地博客基本就搭建好了，不如让它上波线吧～</p>
+</blockquote>
+<h3 id="5-网站部署"><a href="#5-网站部署" class="headerlink" title="5.网站部署"></a>5.网站部署</h3><p>可以选择通过<code>Github Pages</code>或是<code>Coding Pages</code>来部署我们的网站，如果您想要让不会翻墙的小伙伴们更快的浏览你的网站的话，可以部署到<code>Coding Pages</code>里。当然<code>GitHub Pages</code>更好啦，毕竟是全球最大的开源项目托管平台（<em>同性交友网站</em>）😳。</p>
+<p>这里我就拿Github来做示范。</p>
+<ul>
+<li>进入<a href="github.com">Github.com</a></li>
+<li>填写注册信息</li>
+</ul>
+<img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/github1.png" alt="GitHub.Register" title="GitHub.Register">
+<ul>
+<li>根据提示操作，注册成功并验证邮箱后</li>
+<li>进入自己的profile</li>
+</ul>
+<img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/github2.png" alt="GitHub.Profile1" title="GitHub.Profile1">
+<ul>
+<li>点击新建Repository</li>
+</ul>
+<img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/github3.png" alt="GitHub.Register" title="GitHub.Register">
+<ul>
+<li>创建一个新的Repository<ul>
+<li><strong>注意：Repository Name必须是<code>{你的名字}.github.io</code>，这样GitHub就会自动把他当作我们的PersonalPages，且每个人只能创建一个这样的Repository</strong></li>
+</ul>
+</li>
+</ul>
+<img src="/2017/01/18/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/github4.png" alt="New.Repository" title="New.Repository">
+<ul>
+<li>创建成功后我们这时候就需要上传博客文件，在上传之前，我们需要先添加<code>SSH-KEY</code></li>
+<li>如果以前没有创建过<code>SSH-KEY</code>那么我们需要生成一个新的：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C <span class="string">"youremail@youremail.com"</span></div><div class="line">Generating public/private rsa key pair.</div><div class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/Users/your_user_directory/.ssh/id_rsa):</div></pre></td></tr></table></figure>
+<p>记得把邮箱地址换成自己的，然后狂敲回车。</p>
+<ul>
+<li><p>这时我们就已经有<code>ssh-key</code>了，它放在<code>~/.ssh/id_rsa.pub</code>中</p>
+</li>
+<li><p>把该文件的内容复制下来，登录到Github上，点击右上角的 Account Settings—&gt;SSH Public keys —&gt; add another public keys，粘贴进你的ssh-key</p>
+</li>
+<li><p>OK!</p>
+</li>
+<li><p>GitHub现在就已经认识我们的电脑了，然后还需要设置一下用户信息</p>
+<ul>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name <span class="string">"cnfeat"</span>//用户名</div><div class="line">$ git config --global user.email  <span class="string">"cnfeat@gmail.com"</span>//填写自己的邮箱</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>然后我们在博客文件夹里的_config.yml中，填入github地址</p>
+<ul>
+<li><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> git</div><div class="line"><span class="attr">  repo:</span> https://github.com/your-name/your-name.github.io.git</div></pre></td></tr></table></figure>
+</li>
+<li><p>如果你不仅需要部署在github上还要放在coding上的话</p>
+</li>
+<li><figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> git</div><div class="line"><span class="attr">  repo:</span></div><div class="line">  		-github: github地址</div><div class="line">  		-coding: coding地址</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>最后只需要</p>
+<ul>
+<li><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$hexo</span> clean</div><div class="line"><span class="variable">$hexo</span> g</div><div class="line"><span class="variable">$hexo</span> d</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>它就会自动帮我们部署到对应的GitHub和Coding的仓库里去。</p>
+<p>打开你的网址yourname.github.io看看吧~</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Node-js/" rel="tag"># Node.js</a>
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2048/01/01/hello-world/" rel="prev" title="由来。">
+                由来。 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/ygg-icon.JPG"
+               alt="Yggdrasil" />
+          <p class="site-author-name" itemprop="name">Yggdrasil</p>
+          <p class="site-description motion-element" itemprop="description">no description</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识清单"><span class="nav-number">1.</span> <span class="nav-text">知识清单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要步骤"><span class="nav-number">2.</span> <span class="nav-text">主要步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">3.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装Node-js"><span class="nav-number">3.1.</span> <span class="nav-text">1.安装Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装Hexo"><span class="nav-number">3.2.</span> <span class="nav-text">2.安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-开始使用"><span class="nav-number">3.3.</span> <span class="nav-text">3. 开始使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#网站"><span class="nav-number">3.3.1.</span> <span class="nav-text">网站</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网址"><span class="nav-number">3.3.2.</span> <span class="nav-text">网址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#目录"><span class="nav-number">3.3.3.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章"><span class="nav-number">3.3.4.</span> <span class="nav-text">文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类-amp-标签"><span class="nav-number">3.3.5.</span> <span class="nav-text">分类 & 标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#日期-时间格式"><span class="nav-number">3.3.6.</span> <span class="nav-text">日期 / 时间格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分页"><span class="nav-number">3.3.7.</span> <span class="nav-text">分页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#扩展"><span class="nav-number">3.3.8.</span> <span class="nav-text">扩展</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-更换主题"><span class="nav-number">3.4.</span> <span class="nav-text">4.更换主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-网站部署"><span class="nav-number">3.5.</span> <span class="nav-text">5.网站部署</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart" style="color: #5DAC81"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yggdrasil</span>
+</div>
+
+
+<div class="powered-by">
+  powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
