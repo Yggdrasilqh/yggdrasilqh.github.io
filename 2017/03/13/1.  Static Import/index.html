@@ -110,7 +110,7 @@
 
 2. Covariant Return(协变返回)
 只要子类方法与超类方法具有相同的方法签名，或者子类方法的返回值是超">
-<meta property="og:updated_time" content="2017-03-13T05:46:28.000Z">
+<meta property="og:updated_time" content="2017-03-15T13:27:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java高级特性：静态倒入／协变返回／可变参数／泛型／多线程">
 <meta name="twitter:description" content="1.  Static Import
@@ -440,27 +440,24 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<h2 id="5-多线程编程"><a href="#5-多线程编程" class="headerlink" title="5. 多线程编程"></a>5. 多线程编程</h2><ul>
-<li><h4 id="进程的概念"><a href="#进程的概念" class="headerlink" title="进程的概念"></a>进程的概念</h4><ul>
+<h2 id="5-多线程编程"><a href="#5-多线程编程" class="headerlink" title="5. 多线程编程"></a>5. 多线程编程</h2><h4 id="1-进程的概念"><a href="#1-进程的概念" class="headerlink" title="1. 进程的概念"></a>1. 进程的概念</h4><ul>
 <li>进程：是程序运行时为完成某项任务所进行的一次执行活动，是程序执行时一个独立运行的基本单位。</li>
 <li>线程：进程被细分后的更小运行单位</li>
 </ul>
-</li>
-<li><h4 id="线程的概念"><a href="#线程的概念" class="headerlink" title="线程的概念"></a>线程的概念</h4><ul>
+<h4 id="2-线程的概念"><a href="#2-线程的概念" class="headerlink" title="2.线程的概念"></a>2.线程的概念</h4><ul>
 <li>一个进程可以细分为多个线程，这些线程共同拥有该进程占有的内存和资源。</li>
 <li>从Java的角度看，能完成一个子任务的程序片段就是一个线程。 </li>
 <li>线程是一个拥有数据和代码的虚拟CPU封装体（在多核CPU里可能是真实CPU）。</li>
 </ul>
-</li>
-<li><h4 id="进程与线程的区别和联系"><a href="#进程与线程的区别和联系" class="headerlink" title="进程与线程的区别和联系"></a>进程与线程的区别和联系</h4><ul>
+<h4 id="3-进程与线程的区别和联系"><a href="#3-进程与线程的区别和联系" class="headerlink" title="3.进程与线程的区别和联系"></a>3.进程与线程的区别和联系</h4><ul>
 <li>所有线程共享进程申请的资源</li>
 <li>线程必须依赖进程而存在</li>
 <li>线程之间可以并发执行，也可以互相同步</li>
 <li>线程之间谁先运行是未知的</li>
 </ul>
-</li>
-<li><h4 id="多线程编程"><a href="#多线程编程" class="headerlink" title="多线程编程"></a>多线程编程</h4><ul>
-<li>线程的创建<ul>
+<h4 id="4-多线程编程"><a href="#4-多线程编程" class="headerlink" title="4.多线程编程"></a>4.多线程编程</h4><ul>
+<li><p>线程的创建</p>
+<ul>
 <li>继承Thread类<br>public class Test extends Thread</li>
 <li>实现Runnable接口<br>由于Java不支持多重继承，所以同时提供了实现Runnable接口的方式创建线程，需要覆盖其中的run方法。<br>public class Test implements Runnable</li>
 </ul>
@@ -524,7 +521,84 @@ var _hmt = _hmt || [];
 </li>
 </ol>
 </li>
+<li><p>线程的调度</p>
+<ol>
+<li><p>抢占式调度模式</p>
+<ul>
+<li>基本思想：对多个处于可运行状态的线程，实际上只能选取一个线程运行，该线程一直运行到有一个优先级更高的线程进入到可运行状态或者正在运行的线程因某种原因被闭锁为止，即较高优先级的线程能抢占较低优先级线程的使用权。</li>
 </ul>
+</li>
+<li><p>线程的调度</p>
+<ul>
+<li><p>执行一个线程首先要用start()方法启动它进入可运行状态。start()方法主要是把线程注册到一个线程调度表中，并分配线程所需资源，其具体实现细节由一个称为“线程调度程序”的模块来完成</p>
+<blockquote>
+<p>一个线程执行它自身的run()方法(extends  Thread)</p>
+<p>执行一些其他对象的run()方法(public Thread(Runnable target))</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>线程组</p>
+<ul>
+<li>线程组由一系列独立的线程组成</li>
+<li>线程组可以对线程进行集中管理</li>
+<li>对线程组的启动、退出等操作是对线程组中的所有线程都要进行的操作</li>
+<li>线程组可以包含在其它线程组中，构成线程树</li>
+</ul>
+</li>
+<li><p><strong>同步控制</strong></p>
+<ul>
+<li><p>产生原因：由于应用程序可能拥有多个线程。每个线程是共享存储空间。如果两个线程同时访问一个变量或成员方法，势必造成线程对于共享数据的冲突。这样造成数据一致性的破坏。<strong>因此在多线程应用中，必须保护数据一致性，因此引入同步。</strong></p>
+</li>
+<li><p>线程关系</p>
+<ul>
+<li>无关线程</li>
+</ul>
+</li>
+<li><p>交互线程</p>
+<ul>
+<li><p><strong>竞争关系 -&gt; 线程互斥</strong></p>
+<p>各进程采取互斥的方式，实现共享的资源称作临界资源。</p>
+<ol>
+<li><p>对象锁标志</p>
+<ul>
+<li><p>在Java中，任何对象都具有一个相关标识；即“对象锁标志”</p>
+</li>
+<li><p>使用关键字“synchronized”就可以对这个标志施加影响，即用它设置一个同步语句块</p>
+</li>
+<li><p>同步语句的一般格式为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">synchronized</span>(形参引用(即要加锁的对象))</div><div class="line">&#123;保护区&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>释放对象锁标志</p>
+<p>对象锁标志是在拿到它的线程执行完保护区所有代码后自动归还，且Java平台随时关注着对象锁标志的正确与否</p>
+<blockquote>
+<p>同步块语句发生了某个异常</p>
+<p>因用break语句打断循环而退出同步语句块</p>
+</blockquote>
+</li>
+<li><p>把关键字synchronized放到方法头(同步方法)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</div><div class="line">  ....</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+</li>
+<li><p><strong>协作关系 -&gt;  线程同步</strong></p>
+<ol>
+<li>Java实现线程通信的相关方法<ul>
+<li>Void wait() 使当前线程等待</li>
+<li>void wait(long timeout) 等待指定时间</li>
+<li>void notify() 唤醒一个等待线程</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 </li>
 </ul>
 
@@ -692,7 +766,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Static-Import"><span class="nav-number">1.</span> <span class="nav-text">1.  Static Import</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Covariant-Return-协变返回"><span class="nav-number">2.</span> <span class="nav-text">2. Covariant Return(协变返回)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Varargs-可变参数"><span class="nav-number">3.</span> <span class="nav-text">3.Varargs(可变参数)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Generics-泛型"><span class="nav-number">4.</span> <span class="nav-text">4.Generics(泛型)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型的概念"><span class="nav-number">4.0.1.</span> <span class="nav-text">泛型的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型类"><span class="nav-number">4.0.2.</span> <span class="nav-text">泛型类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型方法"><span class="nav-number">4.0.3.</span> <span class="nav-text">泛型方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型的通配符"><span class="nav-number">4.0.4.</span> <span class="nav-text">泛型的通配符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-多线程编程"><span class="nav-number">5.</span> <span class="nav-text">5. 多线程编程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#进程的概念"><span class="nav-number">5.0.1.</span> <span class="nav-text">进程的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#线程的概念"><span class="nav-number">5.0.2.</span> <span class="nav-text">线程的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程与线程的区别和联系"><span class="nav-number">5.0.3.</span> <span class="nav-text">进程与线程的区别和联系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多线程编程"><span class="nav-number">5.0.4.</span> <span class="nav-text">多线程编程</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Static-Import"><span class="nav-number">1.</span> <span class="nav-text">1.  Static Import</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Covariant-Return-协变返回"><span class="nav-number">2.</span> <span class="nav-text">2. Covariant Return(协变返回)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Varargs-可变参数"><span class="nav-number">3.</span> <span class="nav-text">3.Varargs(可变参数)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Generics-泛型"><span class="nav-number">4.</span> <span class="nav-text">4.Generics(泛型)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型的概念"><span class="nav-number">4.0.1.</span> <span class="nav-text">泛型的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型类"><span class="nav-number">4.0.2.</span> <span class="nav-text">泛型类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型方法"><span class="nav-number">4.0.3.</span> <span class="nav-text">泛型方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型的通配符"><span class="nav-number">4.0.4.</span> <span class="nav-text">泛型的通配符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-多线程编程"><span class="nav-number">5.</span> <span class="nav-text">5. 多线程编程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-进程的概念"><span class="nav-number">5.0.1.</span> <span class="nav-text">1. 进程的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-线程的概念"><span class="nav-number">5.0.2.</span> <span class="nav-text">2.线程的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-进程与线程的区别和联系"><span class="nav-number">5.0.3.</span> <span class="nav-text">3.进程与线程的区别和联系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-多线程编程"><span class="nav-number">5.0.4.</span> <span class="nav-text">4.多线程编程</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
