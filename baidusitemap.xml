@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://blog.yggdrasil-web.cn/2017/01/18/Hexo-Google-Baidu/</loc>
-    <lastmod>2017-03-29T12:09:01.000Z</lastmod>
+    <loc>http://blog.cooc.me/2017/11/23/Hexo-Google-Baidu/</loc>
+    <lastmod>2018-08-02T06:26:40.787Z</lastmod>
     <data>
         <display>
         <title>让百度和Google收录您的网站</title>
-        <pubTime>2017-01-18T10:39:24.000Z</pubTime>
+        <pubTime>2017-11-23T10:39:24.000Z</pubTime>
         
         <tag>Hexo</tag>
          
@@ -18,7 +18,7 @@
          
            
              
-              <breadCrumb title="Computer Technology" url="http://blog.yggdrasil-web.cn/categories/Computer-Technology/"/>
+              <breadCrumb title="Computer Technology" url="http://blog.cooc.me/categories/Computer-Technology/"/>
           
         </display>
     </data>
@@ -26,32 +26,12 @@
 
     
   <url>
-    <loc>http://blog.yggdrasil-web.cn/2017/03/13/1.%20%20Static%20Import/</loc>
-    <lastmod>2017-03-15T13:27:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>Java高级特性：静态倒入／协变返回／可变参数／泛型／多线程</title>
-        <pubTime>2017-03-13T05:46:11.000Z</pubTime>
-        
-        <tag>Java基础</tag>
-         
-         
-           
-             
-              <breadCrumb title="Java" url="http://blog.yggdrasil-web.cn/categories/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.yggdrasil-web.cn/2017/01/20/%E5%9F%BA%E4%BA%8Ehexo-GitHub-Pages-Coding-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2017-03-14T02:09:18.000Z</lastmod>
+    <loc>http://blog.cooc.me/2017/11/20/%E5%9F%BA%E4%BA%8Ehexo-GitHub-Pages-Coding-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2018-08-02T06:26:05.542Z</lastmod>
     <data>
         <display>
         <title>基于hexo+GitHub Pages|Coding Pages搭建个人博客</title>
-        <pubTime>2017-01-20T06:48:36.000Z</pubTime>
+        <pubTime>2017-11-20T06:48:36.000Z</pubTime>
         
         <tag>Hexo</tag>
          
@@ -62,7 +42,7 @@
          
            
              
-              <breadCrumb title="Computer Technology" url="http://blog.yggdrasil-web.cn/categories/Computer-Technology/"/>
+              <breadCrumb title="Computer Technology" url="http://blog.cooc.me/categories/Computer-Technology/"/>
           
         </display>
     </data>
@@ -70,7 +50,27 @@
 
     
   <url>
-    <loc>http://blog.yggdrasil-web.cn/1048/01/01/hello-world/</loc>
+    <loc>http://blog.cooc.me/2018/03/13/1.%20%20Static%20Import/</loc>
+    <lastmod>2018-08-02T06:25:52.764Z</lastmod>
+    <data>
+        <display>
+        <title>Java高级特性：静态倒入／协变返回／可变参数／泛型／多线程</title>
+        <pubTime>2018-03-13T05:46:11.000Z</pubTime>
+        
+        <tag>Java基础</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://blog.cooc.me/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.cooc.me/1048/01/01/hello-world/</loc>
     <lastmod>2017-03-13T05:45:44.000Z</lastmod>
     <data>
         <display>
@@ -80,7 +80,7 @@
          
            
              
-              <breadCrumb title="杂记" url="http://blog.yggdrasil-web.cn/categories/%E6%9D%82%E8%AE%B0/"/>
+              <breadCrumb title="杂记" url="http://blog.cooc.me/categories/%E6%9D%82%E8%AE%B0/"/>
           
         </display>
     </data>

@@ -84,46 +84,18 @@
 
 
 
-<meta name="description" content="1.  Static Import
-静态倒入
-1234import static java.lang.System.outpublic void test() &amp;#123;	out.print(&quot;Hello,World&quot;);&amp;#125;
-
-优点：减少代码量
-
-缺点：降低可读性
-
-
-2. Covariant Return(协变返回)
-只要子类方法与超类方法具有相同的方法签名，或者子类方法的返回值是超">
+<meta name="description" content="1.  Static Import 静态倒入 1234import static java.lang.System.outpublic void test() &amp;#123;	out.print(&quot;Hello,World&quot;);&amp;#125;  优点：减少代码量  缺点：降低可读性   2. Covariant Return(协变返回) 只要子类方法与超类方法具有相同的方法签名，或者子类方法的返回值是超">
+<meta name="keywords" content="Java基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java高级特性：静态倒入／协变返回／可变参数／泛型／多线程">
-<meta property="og:url" content="http://blog.yggdrasil-web.cn/2017/03/13/1.  Static Import/index.html">
+<meta property="og:url" content="http://blog.cooc.me/2018/03/13/1.  Static Import/index.html">
 <meta property="og:site_name" content="Yggdrasil">
-<meta property="og:description" content="1.  Static Import
-静态倒入
-1234import static java.lang.System.outpublic void test() &amp;#123;	out.print(&quot;Hello,World&quot;);&amp;#125;
-
-优点：减少代码量
-
-缺点：降低可读性
-
-
-2. Covariant Return(协变返回)
-只要子类方法与超类方法具有相同的方法签名，或者子类方法的返回值是超">
-<meta property="og:updated_time" content="2017-03-15T13:27:23.000Z">
+<meta property="og:description" content="1.  Static Import 静态倒入 1234import static java.lang.System.outpublic void test() &amp;#123;	out.print(&quot;Hello,World&quot;);&amp;#125;  优点：减少代码量  缺点：降低可读性   2. Covariant Return(协变返回) 只要子类方法与超类方法具有相同的方法签名，或者子类方法的返回值是超">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-02T06:25:52.764Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java高级特性：静态倒入／协变返回／可变参数／泛型／多线程">
-<meta name="twitter:description" content="1.  Static Import
-静态倒入
-1234import static java.lang.System.outpublic void test() &amp;#123;	out.print(&quot;Hello,World&quot;);&amp;#125;
-
-优点：减少代码量
-
-缺点：降低可读性
-
-
-2. Covariant Return(协变返回)
-只要子类方法与超类方法具有相同的方法签名，或者子类方法的返回值是超">
+<meta name="twitter:description" content="1.  Static Import 静态倒入 1234import static java.lang.System.outpublic void test() &amp;#123;	out.print(&quot;Hello,World&quot;);&amp;#125;  优点：减少代码量  缺点：降低可读性   2. Covariant Return(协变返回) 只要子类方法与超类方法具有相同的方法签名，或者子类方法的返回值是超">
 
 
 
@@ -151,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://blog.yggdrasil-web.cn/2017/03/13/1.  Static Import/"/>
+  <link rel="canonical" href="http://blog.cooc.me/2018/03/13/1.  Static Import/"/>
 
 
 
@@ -299,7 +271,7 @@ var _hmt = _hmt || [];
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://blog.yggdrasil-web.cn/2017/03/13/1.  Static Import/">
+  <link itemprop="mainEntityOfPage" href="http://blog.cooc.me/2018/03/13/1.  Static Import/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Yggdrasil">
@@ -338,8 +310,8 @@ var _hmt = _hmt || [];
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-13T13:46:11+08:00">
-                2017-03-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-13T13:46:11+08:00">
+                2018-03-13
               </time>
             
 
@@ -398,7 +370,7 @@ var _hmt = _hmt || [];
       
         <h2 id="1-Static-Import"><a href="#1-Static-Import" class="headerlink" title="1.  Static Import"></a>1.  Static Import</h2><ul>
 <li><p>静态倒入</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.System.<span class="function">out</span></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> &#123;</div><div class="line">	out.print(<span class="string">"Hello,World"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="keyword">static</span> java.lang.System.out</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	out.print(<span class="string">"Hello,World"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>优点：减少代码量</p>
 </li>
@@ -410,7 +382,7 @@ var _hmt = _hmt || [];
 </ul>
 <h2 id="3-Varargs-可变参数"><a href="#3-Varargs-可变参数" class="headerlink" title="3.Varargs(可变参数)"></a>3.Varargs(可变参数)</h2><ul>
 <li><p>例：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">(String…str)</span></span>&#123;…&#125;</div><div class="line">test(<span class="string">"1"</span>)</div><div class="line">test(<span class="string">"1"</span>,<span class="string">"2"</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">(String…str)</span></span>&#123;…&#125;</span><br><span class="line">test(<span class="string">"1"</span>)</span><br><span class="line">test(<span class="string">"1"</span>,<span class="string">"2"</span>)</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 </li>
 </ul>
@@ -423,7 +395,7 @@ var _hmt = _hmt || [];
 <li>泛型是对Java语言类型系统的一种扩展，实现了参数化类型的概念，使同一段代码可以应用于多种类型。 </li>
 </ul>
 </li>
-<li><h4 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">test</span>&lt;<span class="title">T</span>&gt; </span>&#123;</div><div class="line">  </div><div class="line">	<span class="keyword">private</span> T obj;</div><div class="line">  </div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showType</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"obj实际类型是"</span>+obj.getClass().getName());</div><div class="line">	&#125;</div><div class="line">  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li><h4 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">test</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">  </span><br><span class="line">	<span class="keyword">private</span> T obj;</span><br><span class="line">  </span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showType</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"obj实际类型是"</span>+obj.getClass().getName());</span><br><span class="line">	&#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>​</p>
 </li>
 <li><h4 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h4><ul>
@@ -494,7 +466,7 @@ var _hmt = _hmt || [];
 <li>定义Thread类的直接字类</li>
 <li>在该类的类体中编写构造方法和run()方法</li>
 <li>用new运算符创建线程实例</li>
-<li>调用start()方法将线程插入到就绪队列<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestThread</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</div><div class="line">	TestThread(String name)&#123;</div><div class="line">		<span class="keyword">super</span>(name);</div><div class="line">&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">new</span> TestThread(“TOne”)).start();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>调用start()方法将线程插入到就绪队列<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestThread</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line">	TestThread(String name)&#123;</span><br><span class="line">		<span class="keyword">super</span>(name);</span><br><span class="line">&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">new</span> TestThread(“TOne”)).start();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -567,7 +539,7 @@ var _hmt = _hmt || [];
 <li><p>使用关键字“synchronized”就可以对这个标志施加影响，即用它设置一个同步语句块</p>
 </li>
 <li><p>同步语句的一般格式为：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">synchronized</span>(形参引用(即要加锁的对象))</div><div class="line">&#123;保护区&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">synchronized</span>(形参引用(即要加锁的对象))</span><br><span class="line">&#123;保护区&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
@@ -579,7 +551,7 @@ var _hmt = _hmt || [];
 </blockquote>
 </li>
 <li><p>把关键字synchronized放到方法头(同步方法)</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</div><div class="line">  ....</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">  ....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>​</p>
 </li>
 </ol>
@@ -633,8 +605,8 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/20/基于hexo-GitHub-Pages-Coding-Pages搭建个人博客/" rel="next" title="基于hexo+GitHub Pages|Coding Pages搭建个人博客">
-                <i class="fa fa-chevron-left"></i> 基于hexo+GitHub Pages|Coding Pages搭建个人博客
+              <a href="/2017/11/23/Hexo-Google-Baidu/" rel="next" title="让百度和Google收录您的网站">
+                <i class="fa fa-chevron-left"></i> 让百度和Google收录您的网站
               </a>
             
           </div>
@@ -731,7 +703,7 @@ var _hmt = _hmt || [];
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -787,7 +759,7 @@ var _hmt = _hmt || [];
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart" style="color: #5DAC81"></i>
   </span>
